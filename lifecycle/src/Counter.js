@@ -11,7 +11,15 @@ const Counter = () => {
 		});
 	};
 
-	setInterval(counter, 1000);
+	useEffect(() => {
+		console.log('component mounted');
+		const intervalId = setInterval(counter, 1000);
+		return () => {
+			// this function will be called when the component is unmounted
+			clearTimeout(intervalId);
+		}
+	}, [])
+
 
 	console.log('Counter comoponent finished');
 

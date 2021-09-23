@@ -7,7 +7,7 @@ const App = () => {
 
   const [search, setSearch] = useState('');
   const [campus, setCampus] = useState('');
-  const [role, setRole] = useState({ student: false, student: true })
+  const [role, setRole] = useState({ student: true, teacher: false })
 
   const options = [...new Set(users.map(user => user.campus))].map(campus => {
     return <option value={campus} key={campus}>{campus}</option>
