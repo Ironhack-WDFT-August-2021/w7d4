@@ -11,10 +11,7 @@ const Counter = () => {
 		});
 	};
 
-	useEffect(() => {
-		const id = setInterval(counter, 1000);
-		return () => clearTimeout(id)
-	}, [])
+	setInterval(counter, 1000);
 
 	console.log('Counter comoponent finished');
 
